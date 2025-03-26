@@ -3,26 +3,26 @@
 ## 📚 Documentation
 
 ### 🧭 Getting Started
-- [Introduction](index.md)
+- [Introduction](docs/index.md)
 
 ### 🖥️ Clusters
-- [Overview](clusters/index.md)
-- [Using Clusters](clusters/clusters.md)
-- [Job Script Examples](clusters/examples.md)
+- [Overview](docs/clusters/index.md)
+- [Using Clusters](docs/clusters/clusters.md)
+- [Job Script Examples](docs/clusters/examples.md)
 
 ### 🐍 Python
-- [Useful Libraries](python/libraries.md)
+- [Useful Libraries](docs/python/libraries.md)
 
 ### 🛠️ Tools & Workflows
-- [Overview](tools/index.md)
-- [Version Control (GitHub, GitLab)](tools/github.md)
-- [Other Tools](tools/tools.md)
+- [Overview](docs/tools/index.md)
+- [Version Control (GitHub, GitLab)](docs/tools/github.md)
+- [Other Tools](docs/tools/tools.md)
 
 ### 📝 Research Communication
-- [Overview](research_comm/index.md)
-- [LaTeX Tips](research_comm/latex.md)
-- [Posters & Visuals](research_comm/posters.md)
-- [Talks & Presentations](research_comm/talks.md)
+- [Overview](docs/research_comm/index.md)
+- [LaTeX Tips](docs/research_comm/latex.md)
+- [Posters & Visuals](docs/research_comm/posters.md)
+- [Talks & Presentations](docs/research_comm/talks.md)
 
 
 ## Contributing
