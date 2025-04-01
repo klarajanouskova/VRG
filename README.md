@@ -1,4 +1,14 @@
+The rendered version is at [https://klarajanouskova.github.io/VRG/](https://klarajanouskova.github.io/VRG/).
+To render locally (more at [Jekyll docs](https://jekyllrb.com/docs/)):
 
+    # install
+    gem install jekyll bundler just-the-docs
+
+    # render site
+    bundle exec jekyll serve
+
+    # with live reload (rebuilds whenever a file is saved)
+    bundle exec jekyll serve --live-reload
 
 ## 📚 Documentation
 
