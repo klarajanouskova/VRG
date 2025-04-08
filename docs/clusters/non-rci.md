@@ -30,15 +30,9 @@ These are smaller, flexible servers that you access via SSH. They're ideal for:
 - Avoid duplicating large datasets; use symbolic links if needed.
 - [Storage docs](https://k13133.felk.cvut.cz/cmp/storage)
 
-## ⚙️ Conda Environments
+## ⚙️ Python and Other Software Setup
 
-- Recommended over pip. Don’t use the default env.
-- Use one env per project.
-- Add the following to your `.bashrc` to load automatically:
-  ```bash
-  ml Anaconda3
-  source activate my_env
-  ```
+See [Python environment setup](/docs/python#python-environment-setup).
 
 ## 🚀 Running Experiments
 

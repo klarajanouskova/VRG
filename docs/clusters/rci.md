@@ -42,8 +42,8 @@ Example job script:
 #SBATCH --mem=25G
 #SBATCH --ntasks=1
 
-ml Anaconda3
-source activate my_env
+module load PyTorch/2.5.1-foss-2023b-CUDA-12.4.0
+source path/to/my_env/bin/activate
 python train.py
 ```
 
@@ -68,8 +68,8 @@ Useful for launching multiple jobs with a single script:
 #SBATCH --mem=32G
 #SBATCH --ntasks=1
 
-ml Anaconda3
-source activate my_env
+module load PyTorch/2.5.1-foss-2023b-CUDA-12.4.0
+source path/to/my_env/bin/activate
 
 # List of configs to run
 CONFIGS=("imagenet" "coco" "voc" "laion")
@@ -95,9 +95,6 @@ Same options as Non-RCI servers:
 - PyCharm deployment
 - `rsync`, `scp`, `git`
 
-## 🧪 Software Setup
+## ⚙️ Python and Other Software Setup
 
-- Use `ml` to load modules (e.g., `ml Anaconda3`)
-- Prefer modules over Conda where possible
-- Avoid mixing modules and conda unless you're confident what you're doing
-
+See [Python environment setup](/docs/python#python-environment-setup).
