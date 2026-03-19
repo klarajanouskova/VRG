@@ -84,6 +84,10 @@ sbatch run_array.sh
 
 Each job will run `train.py` with a different dataset.
 
+## Tutorial on Interactive Python development on RCI GPU nodes
+
+[Tutorial](rci_interactive.html)
+
 ## 🐞 Debugging
 
 - [Jupyter on RCI](https://login.rci.cvut.cz/wiki/jupyter)
