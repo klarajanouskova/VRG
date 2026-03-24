@@ -112,13 +112,13 @@ You may now run locally your Python scripts and the environment stays stable and
 
 We are now ready to start using the setup for remote interactive development.
 
-To allocate an interactive GPU node and to run a Jupyter notebook there, you may use the [lauch_jupyter_slurm.sh](../scripts/launch_jupyter_slurm.sh) script. It also creates an ssh tunnel, so that the Jupyter server is accessible to VSCode running on the RCI login node.
+To allocate an interactive GPU node and to run a Jupyter notebook there, you may use the [lauch_jupyter_slurm.sh](../scripts/launch_jupyter_slurm.sh) script. It also creates an ssh tunnel, so that the Jupyter server is accessible to VSCode running on the RCI login node. The easiest is to run it from the project folder without any parameters.
 
 ```
 Usage: ./launch_jupyter_slurm.sh [-d work_dir] [-p jupyter_port]
 
-  -d  Directory to launch Jupyter from
-  -p  Port Jupyter listens on on the compute node (default: 8888)
+  -d  Directory to launch Jupyter from (default: current dir)
+  -p  Port Jupyter listens on on the compute node (default: random in range 8000-9999)
 
 Example:
   ./launch_jupyter_slurm.sh -d /scratch/myproject -p 8889
@@ -140,10 +140,11 @@ Finally, connect VSCode to the running Jupyter server
 # %% 
 import matplotlib.pyplot as plt
 ```
-- Run the cell. It will fail to find the running server, so you will need to specify it manually:
-    - Click the interpreter button (top right) in the Interactive window.
-    - Select Another Kernel...
-    - Existing Jupyter Server...
-    - Past the URL from the `launch_jupyter_slurm.sh` script
+- Open an interactive window: F1 -> Jupyter: Create Interactive Window
+- Click the interpreter button (top right) in the Interactive window.
+- Select Another Kernel...
+- Existing Jupyter Server...
+- Past the URL from the `launch_jupyter_slurm.sh` script
+- Run the cell by Shift-Enter or click Run Cell button
 
 **Well done! :)**
