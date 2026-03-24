@@ -112,7 +112,7 @@ You may now run locally your Python scripts and the environment stays stable and
 
 We are now ready to start using the setup for remote interactive development.
 
-To allocate an interactive GPU node and to run a Jupyter notebook there, you may use the [lauch_jupyter_slurm.sh](../scripts/launch_jupyter_slurm.sh) script. It also creates an ssh tunnel, so that the Jupyter server is accessible to VSCode running on the RCI login node. The easiest is to run it from the project folder without any parameters.
+To allocate an interactive GPU node and to run a Jupyter notebook there, you may use the [lauch_jupyter_slurm.sh](https://github.com/JanSochman/launch_jupyter_slurm) script. It also creates an ssh tunnel, so that the Jupyter server is accessible to VSCode running on the RCI login node. The easiest is to run it from the project folder without any parameters.
 
 ```
 Usage: ./launch_jupyter_slurm.sh [-d work_dir] [-p jupyter_port]
