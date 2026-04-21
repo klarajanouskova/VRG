@@ -1,0 +1,13 @@
+<link rel="stylesheet" id="vrg-dark-stylesheet" href="{{ '/assets/css/just-the-docs-vrg-dark.css' | relative_url }}" disabled>
+<script>
+(function () {
+  try {
+    var saved = localStorage.getItem('vrg-theme');
+    var darkLink = document.getElementById('vrg-dark-stylesheet');
+    if (saved === 'vrg-dark' && darkLink) {
+      darkLink.disabled = false;
+      document.documentElement.setAttribute('data-vrg-theme', 'dark');
+    }
+  } catch (e) {}
+})();
+</script>
