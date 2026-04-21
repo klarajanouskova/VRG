@@ -8,14 +8,14 @@ $body-text-color: $grey-lt-300;
 $nav-child-link-color: $grey-dk-000;
 $sidebar-color: $grey-dk-300;
 $base-button-color: $grey-dk-250;
-$code-background-color: #31343f;
-$code-linenumber-color: #dee2f7;
+$code-background-color: #0d1117;
+$code-linenumber-color: #e6edf3;
 $feedback-color: darken($sidebar-color, 3%);
 $table-background-color: $grey-dk-250;
 $search-background-color: $grey-dk-250;
 $border-color: $grey-dk-200;
 
-@import "./vendor/OneDarkJekyll/syntax";
+@import "./vendor/accessible-pygments/github-dark";
 
 // VRG palette
 $vrg-blue:   #94ADC9;
