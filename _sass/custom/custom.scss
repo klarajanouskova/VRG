@@ -1,0 +1,73 @@
+// VRG palette accents layered on top of the vrg color scheme
+$vrg-blue:   #94ADC9;
+$vrg-green:  #9F9F8D;
+$vrg-yellow: #FEAB76;
+$vrg-red:    #F64545;
+$vrg-blush:  #C96F81;
+$vrg-lilac:  #C5A9CE;
+
+.main-content {
+  h1, h1 a {
+    color: #A0495B; // darkened blush
+  }
+
+  h2, h2 a {
+    color: #5C7A9E; // darkened blue
+    border-bottom: 1px solid rgba($vrg-blue, 0.35);
+    padding-bottom: 0.2em;
+  }
+
+  h3, h3 a {
+    color: #8A6A94; // darkened lilac
+  }
+
+  h4, h4 a {
+    color: #C06010; // darkened peach
+  }
+
+  blockquote {
+    border-left: 4px solid $vrg-yellow;
+    background-color: rgba($vrg-yellow, 0.12);
+    padding: 0.6em 0.9em;
+    border-radius: 2px;
+  }
+
+  table th {
+    background-color: rgba($vrg-green, 0.22);
+  }
+
+  code {
+    background-color: rgba($vrg-lilac, 0.18);
+    color: #6a3f78;
+  }
+
+  pre.highlight code,
+  div.highlighter-rouge code {
+    background-color: transparent;
+    color: inherit;
+  }
+
+  a:not(.anchor-heading):not(.nav-list-link):not(.site-title) {
+    text-decoration: underline;
+    text-decoration-color: rgba($vrg-blush, 0.45);
+    text-underline-offset: 2px;
+  }
+}
+
+.site-header {
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    $vrg-blush,
+    $vrg-lilac,
+    $vrg-blue,
+    $vrg-green,
+    $vrg-yellow,
+    $vrg-red
+  ) 1;
+}
+
+.nav-list .nav-list-item .nav-list-link.active {
+  color: $vrg-red;
+  font-weight: 600;
+}
