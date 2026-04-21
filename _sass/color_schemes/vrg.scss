@@ -21,11 +21,22 @@ $search-result-preview-color: #6a6a5c;
 $feedback-color:             darken($sidebar-color, 3%);
 $code-background-color:      #f6f6f1;
 
-// Section/category accent used by just-the-docs
 $blue-000: $vrg-blue;
 $blue-100: $vrg-blue;
 $purple-000: $vrg-green-dk;
 $purple-100: $vrg-green;
 
-// Border color tint
 $border-color: #e4e4dd;
+
+// Accent colors used by custom.scss — light-mode variants
+$vrg-accent-h1:         #A0495B;           // darkened blush
+$vrg-accent-h2:         #5C7A9E;           // darkened blue
+$vrg-accent-h3:         #8A6A94;           // darkened lilac
+$vrg-accent-h4:         #C06010;           // darkened peach
+$vrg-accent-h2-rule:    rgba($vrg-blue, 0.35);
+$vrg-accent-blockquote-border: $vrg-yellow;
+$vrg-accent-blockquote-bg:     rgba($vrg-yellow, 0.12);
+$vrg-accent-table-th-bg:       rgba($vrg-green, 0.22);
+$vrg-accent-code-bg:           rgba($vrg-lilac, 0.18);
+$vrg-accent-code-fg:           #6a3f78;
+$vrg-accent-link-underline:    rgba($vrg-blush, 0.45);

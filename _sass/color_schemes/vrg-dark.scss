@@ -1,0 +1,44 @@
+// VRG night-mode scheme — dark base with VRG palette accents
+// Replicates just-the-docs' dark scheme then applies VRG overrides.
+
+$color-scheme: dark;
+$body-background-color: $grey-dk-300;
+$body-heading-color: $grey-lt-000;
+$body-text-color: $grey-lt-300;
+$nav-child-link-color: $grey-dk-000;
+$sidebar-color: $grey-dk-300;
+$base-button-color: $grey-dk-250;
+$code-background-color: #31343f;
+$code-linenumber-color: #dee2f7;
+$feedback-color: darken($sidebar-color, 3%);
+$table-background-color: $grey-dk-250;
+$search-background-color: $grey-dk-250;
+$border-color: $grey-dk-200;
+
+@import "./vendor/OneDarkJekyll/syntax";
+
+// VRG palette
+$vrg-blue:   #94ADC9;
+$vrg-green:  #9F9F8D;
+$vrg-yellow: #FEAB76;
+$vrg-red:    #F64545;
+$vrg-blush:  #C96F81;
+$vrg-lilac:  #C5A9CE;
+
+$link-color:                 $vrg-yellow;
+$btn-primary-color:          $vrg-blush;
+$body-heading-color:         #f0e8d4;
+$search-result-preview-color: #c0b8a8;
+
+// Accent colors used by custom.scss — dark-mode variants (brighter)
+$vrg-accent-h1:                #F4A5B5;
+$vrg-accent-h2:                #B0C8E0;
+$vrg-accent-h3:                #D8BFE0;
+$vrg-accent-h4:                $vrg-yellow;
+$vrg-accent-h2-rule:           rgba($vrg-blue, 0.45);
+$vrg-accent-blockquote-border: $vrg-yellow;
+$vrg-accent-blockquote-bg:     rgba($vrg-yellow, 0.10);
+$vrg-accent-table-th-bg:       rgba($vrg-green, 0.28);
+$vrg-accent-code-bg:           rgba($vrg-lilac, 0.20);
+$vrg-accent-code-fg:           #E0C8E8;
+$vrg-accent-link-underline:    rgba($vrg-blush, 0.55);
