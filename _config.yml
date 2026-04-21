@@ -1,6 +1,8 @@
 title: VRG docs
 description: An unofficial VRG documentation
 theme: just-the-docs
+color_scheme: vrg
+logo: /assets/images/vrg-logo.png
 
 url: https://klarajanouskova.github.io/VRG
 

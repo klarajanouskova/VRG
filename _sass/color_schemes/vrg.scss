@@ -1,0 +1,31 @@
+// VRG color scheme — matches https://vrg.fel.cvut.cz/
+// Palette: --blue #94ADC9, --green #9F9F8D, --yellow #FEAB76,
+//          --red #F64545, --blush #C96F81, --lilac #C5A9CE
+
+$vrg-blue:   #94ADC9;
+$vrg-green:  #9F9F8D;
+$vrg-yellow: #FEAB76;
+$vrg-red:    #F64545;
+$vrg-blush:  #C96F81;
+$vrg-lilac:  #C5A9CE;
+
+// Darkened sage/olive for accessible link contrast on white
+$vrg-green-dk: #6F6F5E;
+
+$link-color:                 $vrg-green-dk;
+$btn-primary-color:          $vrg-green;
+$body-heading-color:         #3d3d34;
+$sidebar-color:              #f6f6f1;
+$search-result-preview-color: #6a6a5c;
+
+$feedback-color:             darken($sidebar-color, 3%);
+$code-background-color:      #f6f6f1;
+
+// Section/category accent used by just-the-docs
+$blue-000: $vrg-blue;
+$blue-100: $vrg-blue;
+$purple-000: $vrg-green-dk;
+$purple-100: $vrg-green;
+
+// Border color tint
+$border-color: #e4e4dd;
