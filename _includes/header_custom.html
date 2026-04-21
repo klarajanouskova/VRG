@@ -1,0 +1,46 @@
+<button id="vrg-theme-toggle" type="button" aria-label="Toggle night mode" aria-pressed="false" title="Toggle night mode">
+  <svg id="vrg-theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
+  </svg>
+  <svg id="vrg-theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" style="display:none;">
+    <path d="M12 4.5a1 1 0 0 1-1-1V2a1 1 0 1 1 2 0v1.5a1 1 0 0 1-1 1Zm0 17a1 1 0 0 1-1-1V19a1 1 0 1 1 2 0v1.5a1 1 0 0 1-1 1Zm8.5-9.5H19a1 1 0 1 1 0-2h1.5a1 1 0 1 1 0 2ZM5 12H3.5a1 1 0 1 1 0-2H5a1 1 0 1 1 0 2Zm12.8-6.3a1 1 0 0 1-.7-1.7l1.1-1.1a1 1 0 1 1 1.4 1.4l-1.1 1.1a1 1 0 0 1-.7.3ZM5.4 19.6a1 1 0 0 1-.7-1.7l1.1-1.1a1 1 0 1 1 1.4 1.4l-1.1 1.1a1 1 0 0 1-.7.3Zm13.2 0a1 1 0 0 1-.7-.3l-1.1-1.1a1 1 0 1 1 1.4-1.4l1.1 1.1a1 1 0 0 1-.7 1.7ZM6.5 6.8a1 1 0 0 1-.7-.3L4.7 5.4A1 1 0 1 1 6.1 4l1.1 1.1a1 1 0 0 1-.7 1.7ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/>
+  </svg>
+</button>
+<script>
+(function () {
+  var LS_KEY = 'vrg-theme';
+  var DARK = 'vrg-dark';
+  var LIGHT = 'vrg';
+
+  function applyTheme(theme) {
+    if (window.jtd && typeof jtd.setTheme === 'function') {
+      jtd.setTheme(theme);
+    }
+    var btn = document.getElementById('vrg-theme-toggle');
+    if (!btn) return;
+    var isDark = theme === DARK;
+    btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+    btn.setAttribute('aria-label', isDark ? 'Switch to day mode' : 'Switch to night mode');
+    document.getElementById('vrg-theme-icon-moon').style.display = isDark ? 'none' : '';
+    document.getElementById('vrg-theme-icon-sun').style.display  = isDark ? '' : 'none';
+  }
+
+  // Apply saved theme ASAP to avoid flash
+  var saved = LIGHT;
+  try { saved = localStorage.getItem(LS_KEY) || LIGHT; } catch (e) {}
+  applyTheme(saved);
+
+  document.addEventListener('DOMContentLoaded', function () {
+    applyTheme(saved);
+    var btn = document.getElementById('vrg-theme-toggle');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var current = LIGHT;
+      try { current = localStorage.getItem(LS_KEY) || LIGHT; } catch (e) {}
+      var next = current === LIGHT ? DARK : LIGHT;
+      try { localStorage.setItem(LS_KEY, next); } catch (e) {}
+      applyTheme(next);
+    });
+  });
+})();
+</script>

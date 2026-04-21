@@ -1,4 +1,6 @@
-// VRG palette accents layered on top of the vrg color scheme
+// VRG palette accents layered on top of the active color scheme.
+// Scheme-specific accent values are defined in _sass/color_schemes/vrg*.scss.
+
 $vrg-blue:   #94ADC9;
 $vrg-green:  #9F9F8D;
 $vrg-yellow: #FEAB76;
@@ -7,38 +9,31 @@ $vrg-blush:  #C96F81;
 $vrg-lilac:  #C5A9CE;
 
 .main-content {
-  h1, h1 a {
-    color: #A0495B; // darkened blush
-  }
+  h1, h1 a { color: $vrg-accent-h1; }
 
   h2, h2 a {
-    color: #5C7A9E; // darkened blue
-    border-bottom: 1px solid rgba($vrg-blue, 0.35);
+    color: $vrg-accent-h2;
+    border-bottom: 1px solid $vrg-accent-h2-rule;
     padding-bottom: 0.2em;
   }
 
-  h3, h3 a {
-    color: #8A6A94; // darkened lilac
-  }
-
-  h4, h4 a {
-    color: #C06010; // darkened peach
-  }
+  h3, h3 a { color: $vrg-accent-h3; }
+  h4, h4 a { color: $vrg-accent-h4; }
 
   blockquote {
-    border-left: 4px solid $vrg-yellow;
-    background-color: rgba($vrg-yellow, 0.12);
+    border-left: 4px solid $vrg-accent-blockquote-border;
+    background-color: $vrg-accent-blockquote-bg;
     padding: 0.6em 0.9em;
     border-radius: 2px;
   }
 
   table th {
-    background-color: rgba($vrg-green, 0.22);
+    background-color: $vrg-accent-table-th-bg;
   }
 
   code {
-    background-color: rgba($vrg-lilac, 0.18);
-    color: #6a3f78;
+    background-color: $vrg-accent-code-bg;
+    color: $vrg-accent-code-fg;
   }
 
   pre.highlight code,
@@ -49,7 +44,7 @@ $vrg-lilac:  #C5A9CE;
 
   a:not(.anchor-heading):not(.nav-list-link):not(.site-title) {
     text-decoration: underline;
-    text-decoration-color: rgba($vrg-blush, 0.45);
+    text-decoration-color: $vrg-accent-link-underline;
     text-underline-offset: 2px;
   }
 }
@@ -70,4 +65,33 @@ $vrg-lilac:  #C5A9CE;
 .nav-list .nav-list-item .nav-list-link.active {
   color: $vrg-red;
   font-weight: 600;
+}
+
+// Night-mode toggle button
+#vrg-theme-toggle {
+  position: fixed;
+  top: 0.6rem;
+  right: 0.8rem;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid $vrg-green;
+  border-radius: 999px;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: $vrg-green;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.08);
+  }
+
+  svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    fill: currentColor;
+  }
 }
