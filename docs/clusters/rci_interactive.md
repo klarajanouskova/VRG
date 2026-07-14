@@ -117,7 +117,7 @@ You may now run locally your Python scripts and the environment stays stable and
 
 We are now ready to start using the setup for remote interactive development.
 
-**Warning:** It is not recommended to run VSCode on the RCI login node (it takes a lot of memory and slows down the cluster). Instead, use the `cpu_rci.bash` script as described [here](vscode_remote.md). Further, we will refer to the allocated computational node as `cpu_rci`.
+**Warning:** It is not recommended to run VSCode on the RCI login node (it takes a lot of memory and slows down the cluster). Instead, use the `cpu_rci.bash` script as described [here](vscode_remote.html). Further, we will refer to the allocated computational node as `cpu_rci`.
 
 To allocate an interactive GPU node and to run a Jupyter notebook there, you may use the [lauch_jupyter_slurm.sh](https://github.com/JanSochman/launch_jupyter_slurm) script. It also creates an ssh tunnel, so that the Jupyter server is accessible to VSCode running on the `cpu_rci` node. The easiest is to run it from the project folder without any parameters.
 
