@@ -15,8 +15,8 @@ parent: Computational Resources
 - running and connecting to a jupyter server -->
 
 The above image demonstrates the result of this tutorial:
-- VSCode server is run on RCI login node and allows to edit the code there remotely over SSH
-- An interactive window is connected to a Jupyter server on an interactive GPU node, all modules and virtual environments are correctly loaded
+- VSCode server is run on RCI **CPU node** and allows to edit the code there remotely over SSH
+- An interactive window is connected to a Jupyter server on an interactive **GPU node**, all modules and virtual environments are correctly loaded
 - You can run the full code or an individual cell only (repeatedly and in custom order)
 - It is possible to explore/edit variables interactively and visualize the results
 
@@ -69,7 +69,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 From now on, you can specify commands (e.g. module load) which are run when entering a particular directory using `.envrc` files. For our purpose it is usually enough to load CUDA support modules and to choose a version of Python used by the project.
 
-Note, that all your code has to be in a directory visible from both the RCI login node and the RCI GPU nodes (e.g. `/mnt/personal/username/my_project`).
+Note, that all your code has to be in a directory visible from both the RCI login node and the RCI CPU/GPU nodes (e.g. `/mnt/personal/username/my_project`).
 
 To find the right CUDA version, allocate an interactive GPU node, check the CUDA version used
 ```
@@ -117,7 +117,9 @@ You may now run locally your Python scripts and the environment stays stable and
 
 We are now ready to start using the setup for remote interactive development.
 
-To allocate an interactive GPU node and to run a Jupyter notebook there, you may use the [launch_jupyter_slurm.sh](https://github.com/JanSochman/launch_jupyter_slurm) script. It also creates an ssh tunnel, so that the Jupyter server is accessible to VSCode running on the RCI login node. The easiest is to run it from the project folder without any parameters.
+**Warning:** It is not recommended to run VSCode on the RCI login node (it takes a lot of memory and slows down the cluster). Instead, use the `cpu_rci.bash` script as described [here](vscode_remote.md). Further, we will refer to the allocated computational node as `cpu_rci`.
+
+To allocate an interactive GPU node and to run a Jupyter notebook there, you may use the [lauch_jupyter_slurm.sh](https://github.com/JanSochman/launch_jupyter_slurm) script. It also creates an ssh tunnel, so that the Jupyter server is accessible to VSCode running on the `cpu_rci` node. The easiest is to run it from the project folder without any parameters.
 
 ```
 Usage: ./launch_jupyter_slurm.sh [-d work_dir] [-p jupyter_port]
@@ -135,7 +137,7 @@ It outputs the URL of the Jupyter server, e.g.
 
 Finally, connect VSCode to the running Jupyter server
 
-- Open your local VSCode (at your computer) and connect to a remote server (`login3.rci.cvut.cz`) by pressing F1 and selecting "Remote-SSH: Connect Current Window to Host...".
+- Open your local VSCode (at your computer) and connect to a remote server (`cpu_rci`) by pressing F1 and selecting "Remote-SSH: Connect Current Window to Host...".
 - Install a direnv extension (the one by Martin Kühl).
 - Install the Jupyter extension.
 - Open your project directory.
